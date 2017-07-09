@@ -9,12 +9,16 @@ set <- function(y){
 	x<<- y
 	m <<- NULL
 }
+# Gets function for the matrix
 get <- function(){
 	x
 }
+#Sets the inverse of the function
 setinverse <- function(inverse)}{
 	m <<- inverse
 }
+ 
+  # Retrieve the inverse of the matrix
 getinverse <- function (){
 	m
 }
@@ -29,6 +33,7 @@ cacheSolve <- function(x, ...) {
         	message("Getting cachced data")
         	return(m)
         }
+  ## Return the computed inverse.  	
         data <- x$get()
         m <- solve(data, ...)
         x$setinverse(m)
